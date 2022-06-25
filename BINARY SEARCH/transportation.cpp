@@ -1,3 +1,7 @@
+// least capacity should b max of the array
+// incmeneting by one and the comparing with k
+// for minimum c
+
 #include <iostream>
 using namespace std;
 
