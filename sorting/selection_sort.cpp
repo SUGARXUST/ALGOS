@@ -1,3 +1,8 @@
+/*SELECTION SORT
+compare first element with the rest
+of the elements in the array and replace the
+first element with minimum elment*/
+
 #include <iostream>
 using namespace std;
 
