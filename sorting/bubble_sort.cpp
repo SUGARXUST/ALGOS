@@ -25,22 +25,17 @@ int main()
     for (int first_pos = 0; first_pos < length_of_arr; first_pos++)
         cin >> arr[first_pos];
 
-    int i, key, j;
-    for (i = 1; i < length_of_arr; i++)
+    int i, j;
+    for (i = 0; i < length_of_arr - 1; i++)
     {
-        key = arr[i];
-        j = i - 1;
 
-        // Move elements of arr[0..i-1],
-        // that are greater than key, to one
-        // position ahead of their
-        // current position
-        while (j >= 0 && arr[j] > key)
+        // Last i elements are already
+        // in place
+        for (j = 0; j < length_of_arr - i - 1; j++)
         {
-            arr[j + 1] = arr[j];
-            j = j - 1;
+            if (arr[j] > arr[j + 1])
+                swap(arr[j], arr[j + 1]);
         }
-        arr[j + 1] = key;
     }
     // printing the sorted array
     for (int i = 0; i < length_of_arr; i++)
