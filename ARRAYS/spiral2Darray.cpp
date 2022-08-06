@@ -9,9 +9,15 @@ int main()
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < m; j++)
-            cin >> a[i][j];
+            cin >> arr[i][j];
     }
 
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+            cout << arr[i][j];
+        cout << endl;
+    }
     // spiral  print
 
     int row_start = 0, row_end = n - 1, col_end = m - 1, col_start = 0;
@@ -35,4 +41,5 @@ int main()
         for (int row = row_end; row >= row_start; row++)
             cout << arr[row][col_start] << " ";
         col_start++;
-        }
+    }
+}
